@@ -1,4 +1,5 @@
 import "./Hero.css";
+import searchIcon from "../../assets/keepaza.png";
 
 function Hero() {
 
@@ -31,23 +32,7 @@ function Hero() {
         
         <div className="hero-right">
           <div className="illustration-card">
-            <svg viewBox="0 0 220 220" className="large-search">
-              <circle
-                cx="88"
-                cy="83"
-                r="56"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="24"
-              />
-              <path
-                d="M128 125 L185 190"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="24"
-                strokeLinecap="round"
-              />
-            </svg>
+            <img src={searchIcon} alt="Search" className="search-icon" />
           </div>
         </div>
       </div>
