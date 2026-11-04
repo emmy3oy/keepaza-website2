@@ -1,5 +1,6 @@
 
 .hero {
+  width: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -17,12 +18,6 @@
   gap: 65px;
 }
 
-/* .search-icon {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-} */
-
 .hero-left {
   min-width: 0;
   color: #fff;
@@ -39,7 +34,8 @@
 .hero-description {
   max-width: 610px;
   margin: 34px 0 40px;
-  color: #fff;  font-size: clamp(18px, 1.9vw, 25px);
+  color: #fff;
+  font-size: clamp(18px, 1.9vw, 25px);
   line-height: 1.55;
   letter-spacing: -0.6px;
 }
@@ -49,6 +45,24 @@
   color: #8998b0;
   font-size: 20px;
   font-weight: 700;
+}
+
+.resolve-form {
+  position: relative;
+}
+
+.resolve-form::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  background: #fff;
+  border-radius: 20px;
+  z-index: 0;
+}
+
+.resolve-form > * {
+  position: relative;
+  z-index: 1;
 }
 
 .resolve-form input {
@@ -68,24 +82,6 @@
 .resolve-form input::placeholder {
   color: #929db1;
   opacity: 1;
-}
-
-.resolve-form {
-  position: relative;
-}
-
-.resolve-form::before {
-  content: "";
-  position: absolute;
-  inset: 12px;
-  background: #fff;
-  border-radius: 20px;
-  z-index: 0;
-}
-
-.resolve-form > * {
-  position: relative;
-  z-index: 1;
 }
 
 .resolve-button {
@@ -140,6 +136,7 @@
 
 .activity-card p {
   flex: 1;
+  min-width: 0;
   margin: 0;
   font-size: 13px;
   line-height: 1.5;
@@ -185,34 +182,47 @@
   transform: rotate(-3deg);
 }
 
+/* Large laptops and smaller desktops */
+@media (max-width: 1200px) {
+  .hero-content {
+    gap: 40px;
+  }
+
+  .hero-left h1 {
+    font-size: clamp(48px, 6vw, 76px);
+    letter-spacing: -3px;
+  }
+
+  .illustration-card {
+    max-width: 380px;
+  }
+}
+
 /* Tablets */
 @media (max-width: 900px) {
   .hero {
+    min-height: auto;
     padding: 55px 5%;
   }
 
   .hero-content {
     grid-template-columns: 1fr 0.8fr;
-    gap: 35px;
+    gap: 25px;
   }
 
   .hero-left h1 {
-    font-size: clamp(48px, 7vw, 70px);
-    letter-spacing: -3px;
+    font-size: clamp(42px, 6vw, 60px);
+    letter-spacing: -2.5px;
   }
 
   .hero-description {
-    font-size: 19px;
-    margin: 25px 0 30px;
+    font-size: 17px;
+    margin: 22px 0 25px;
+    line-height: 1.5;
   }
 
-  .resolve-form {
-    min-height: 80px;
-    padding: 9px;
-  }
-
-  .resolve-form::before {
-    inset: 9px;
+  .illustration-card {
+    max-width: 320px;
   }
 
   .resolve-form input {
@@ -239,16 +249,15 @@
   }
 }
 
-/* Mobile */
+/* Mobile phones */
 @media (max-width: 650px) {
   .hero {
     min-height: auto;
-    padding: 38px 20px 45px;
+    padding: 35px 20px 45px;
     align-items: flex-start;
   }
 
   .hero-content {
-    width: 100%;
     grid-template-columns: 1fr;
     gap: 0;
   }
@@ -258,51 +267,83 @@
   }
 
   .hero-left h1 {
-    font-size: clamp(34px, 9vw, 48px);
-    line-height: 1.05;
-    letter-spacing: -2px;
+    font-size: clamp(32px, 7.5vw, 42px);
+    line-height: 1.08;
+    letter-spacing: -1.5px;
   }
 
   .hero-description {
     max-width: 100%;
-    margin: 20px 0 24px;
-    font-size: 15px;
+    margin: 18px 0 24px;
+    font-size: clamp(14px, 3.8vw, 16px);
     line-height: 1.5;
     letter-spacing: -0.2px;
   }
 
+  .resolve-form input {
+    height: 52px;
+    font-size: 14px;
+  }
+
+  .resolve-button {
+    min-height: 42px;
+    padding: 0 12px;
+    font-size: 13px;
+  }
+
   .activity-card {
     width: 100%;
-    max-width: 100%;
+    max-width: 320px;
     min-height: 58px;
-    margin-top: 20px;
+    margin-top: 22px;
     padding: 9px 10px;
-    gap: 8px;
+    gap: 9px;
     border-radius: 13px;
   }
 
   .activity-avatar {
     width: 32px;
     height: 32px;
+    font-size: 12px;
   }
 
   .activity-card p {
-    font-size: 10px;
+    font-size: 11px;
+    line-height: 1.4;
   }
 
   .activity-card small {
     font-size: 9px;
   }
 
-  .hero-right {
-    display: none;
-  }
-
+  .hero-right,
   .illustration-card {
     display: none;
   }
 }
 
+/* Small mobile phones */
+@media (max-width: 480px) {
+  .hero {
+    padding: 30px 18px 40px;
+  }
+
+  .hero-left h1 {
+    font-size: clamp(30px, 7.5vw, 36px);
+    letter-spacing: -1.2px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+    margin: 16px 0 20px;
+  }
+
+  .activity-card {
+    max-width: 280px;
+  }
+}
+
+/* Very small mobile phones */
 @media (max-width: 360px) {
   .hero {
     padding-right: 15px;
@@ -310,10 +351,32 @@
   }
 
   .hero-left h1 {
-    font-size: 34px;
+    font-size: 29px;
+    letter-spacing: -1px;
+  }
+
+  .hero-description {
+    font-size: 13px;
+  }
+
+  .activity-card {
+    max-width: 100%;
+    padding: 8px;
+    gap: 7px;
   }
 
   .activity-card p {
-    font-size: 9px;
+    font-size: 10px;
+  }
+
+  .activity-card small {
+    font-size: 8px;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .resolve-button {
+    transition: none;
   }
 }
