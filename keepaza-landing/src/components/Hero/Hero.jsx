@@ -2,30 +2,30 @@ import "./Hero.css";
 import searchIcon from "../../assets/keepaza.png";
 
 function Hero() {
-
   return (
     <section className="hero">
       <div className="hero-content">
-        <div className="hero-left">
-          <h1>
-            Send Funds
-            <br />
-            by Username.
-          </h1>
 
-          <p className="hero-description">
-            One trusted profile for freelancers, merchants, and
-            creators — get paid, send invoices, and showcase
-            your products and services.
-          </p>
+        <h1>
+          Send Funds
+          <br />
+          by Username.
+        </h1>
 
-             
-          <div className="navbar-downloads">
-          <a
-            href="#"
-            className="store-button app-store-button"
-            aria-label="Download Keepaza on the App Store"
-          >
+        <div className="hero-right">
+          <div className="illustration-card">
+            <img src={searchIcon} alt="Keepaza App" className="search-icon" />
+          </div>
+        </div>
+
+        <p className="hero-description">
+          One trusted profile for freelancers, merchants, and
+          creators — get paid, send invoices, and showcase
+          your products and services.
+        </p>
+
+        <div className="navbar-downloads">
+          <a href="#" className="store-button app-store-button">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path
                 fill="currentColor"
@@ -38,11 +38,7 @@ function Hero() {
             </span>
           </a>
 
-          <a
-            href="#"
-            className="store-button play-store-button"
-            aria-label="Get Keepaza on Google Play"
-          >
+          <a href="#" className="store-button play-store-button">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path fill="#34A853" d="M3.5 2.7 14 12 3.5 21.3z" />
               <path fill="#4285F4" d="m3.5 21.3 13-7.2-2.5-2.1z" />
@@ -56,13 +52,6 @@ function Hero() {
           </a>
         </div>
 
-        </div>
-        
-        <div className="hero-right">
-          <div className="illustration-card">
-            <img src={searchIcon} alt="Search" className="search-icon" />
-          </div>
-        </div>
       </div>
     </section>
   );
