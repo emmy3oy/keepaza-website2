@@ -9,8 +9,6 @@ function Navbar() {
           <img src="/logo.png" alt="Keepaza logo" />
           <span>Keepaza</span>
         </a>
-
-        
       </div>
     </header>
   );

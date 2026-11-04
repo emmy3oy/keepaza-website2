@@ -182,74 +182,7 @@
   transform: rotate(-3deg);
 }
 
-/* Large laptops and smaller desktops */
-@media (max-width: 1200px) {
-  .hero-content {
-    gap: 40px;
-  }
-
-  .hero-left h1 {
-    font-size: clamp(48px, 6vw, 76px);
-    letter-spacing: -3px;
-  }
-
-  .illustration-card {
-    max-width: 380px;
-  }
-}
-
-/* Tablets */
-@media (max-width: 900px) {
-  .hero {
-    min-height: auto;
-    padding: 55px 5%;
-  }
-
-  .hero-content {
-    grid-template-columns: 1fr 0.8fr;
-    gap: 25px;
-  }
-
-  .hero-left h1 {
-    font-size: clamp(42px, 6vw, 60px);
-    letter-spacing: -2.5px;
-  }
-
-  .hero-description {
-    font-size: 17px;
-    margin: 22px 0 25px;
-    line-height: 1.5;
-  }
-
-  .illustration-card {
-    max-width: 320px;
-  }
-
-  .resolve-form input {
-    font-size: 14px;
-  }
-
-  .resolve-button {
-    padding: 0 12px;
-    font-size: 14px;
-  }
-
-  .activity-card {
-    margin-top: 24px;
-    padding: 9px;
-    gap: 8px;
-  }
-
-  .activity-card p {
-    font-size: 11px;
-  }
-
-  .activity-card small {
-    font-size: 10px;
-  }
-}
-
-/* Mobile phones */
+/* Mobile */
 @media (max-width: 650px) {
   .hero {
     min-height: auto;
@@ -275,7 +208,7 @@
   .hero-description {
     max-width: 100%;
     margin: 18px 0 24px;
-    font-size: clamp(14px, 3.8vw, 16px);
+    font-size: 14px;
     line-height: 1.5;
     letter-spacing: -0.2px;
   }
@@ -323,31 +256,14 @@
 }
 
 /* Small mobile phones */
-@media (max-width: 480px) {
-  .hero {
-    padding: 30px 18px 40px;
-  }
-
-  .hero-left h1 {
-    font-size: clamp(30px, 7.5vw, 36px);
-    letter-spacing: -1.2px;
-  }
-
-  .hero-description {
-    font-size: 14px;
-    margin: 16px 0 20px;
-  }
-
-  .activity-card {
-    max-width: 280px;
-  }
-}
-
-/* Very small mobile phones */
 @media (max-width: 360px) {
   .hero {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 30px 15px 40px;
+  }
+
+  .hero-right,
+  .illustration-card {
+    display: none;
   }
 
   .hero-left h1 {
