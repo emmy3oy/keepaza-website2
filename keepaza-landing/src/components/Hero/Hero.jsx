@@ -19,15 +19,7 @@ function Hero() {
             your products and services.
           </p>
 
-            <div className="activity-card">
-            <div className="activity-avatar">E</div>
-            <p>
-              <strong>Emeka S.</strong>{" "}
-              <span>from Osun linked their bank</span>
-            </p>
-            <small>3s ago</small>
-          </div>
-          
+             
           <div className="navbar-downloads">
           <a
             href="#"
@@ -63,7 +55,7 @@ function Hero() {
             </span>
           </a>
         </div>
-        
+
         </div>
         
         <div className="hero-right">

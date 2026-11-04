@@ -290,6 +290,13 @@
   }
 }
 
+@media (max-width: 260px) {
+  .hero-right,
+  .illustration-card {
+    display: none;
+  }
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .resolve-button {
